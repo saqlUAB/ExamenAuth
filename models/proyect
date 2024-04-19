@@ -1,0 +1,25 @@
+const mongoose = require('mongoose');
+
+const proyectSchema = new mongoose.Schema({
+    CodeProyect: String,
+    ProjectName : String,
+    Description :String,
+    Status :String,
+    StartDate :Date,
+    EndDate :Date,
+    Manager :String,
+    Progress :String,
+    Priority :String,
+    Budget : Number,
+    ActualCost :String,
+    AssignedResources :String,
+    RisksIssues :String,
+    Comments :String,
+    Client :String,
+    Category :String,
+    LastUpdate :Date,
+    ReviewDate :Date
+})
+
+const proyectModel = mongoose.model('Proyect',proyectSchema,'proyect');
+module.exports = proyectModel;
